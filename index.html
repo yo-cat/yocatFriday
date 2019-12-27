@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>요캣의 금요일</title>
+
+    <script src="jquery-3.4.0.js"></script>
+
+    <style>
+        #html{
+            margin: 0;
+        }
+        #mainBody {
+            width: 600px;
+            height: 640px;
+            background-image: url("bg2.gif");
+        }
+
+        .myPicture {
+            /* margin: 20px; */
+            width: 300px;
+            height: 300px;
+            margin: 0 0 0 25px;
+        }
+
+        #navi {
+            width: 700px;
+            height: 90px;
+            text-align: center;
+        }
+
+        .menu {
+            width: 233px;
+            height: 90px;
+            /* background: greenyellow; */
+            float: left;
+            /* padding: 10px; */
+        }
+
+        .menuIcon {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #content {
+            width: 700px;
+            height: 400px;
+            margin: 330px auto;
+            display: inline-table;
+        }
+
+
+        #before {
+            float: left;
+            width: 75px;
+            height: 100%;
+            /* margin-top: 250px;      */
+        }
+
+        #next {
+            float: left;
+            width: 75px;
+            height: 100%;
+            /* margin-top: 250px; */
+        }
+
+        .Image {
+            margin-top: 200px;
+        }
+
+
+        #cont {
+            float: left;
+            width: 550px;
+            height: 660px;
+            overflow: hidden;
+            /* position: relative; */
+        }
+
+        .intro {
+            width: 550px;
+            height: 100%;
+            /* background-color: brown; */
+            position: relative;
+        }
+
+
+        .card {
+            display: none;
+        }
+
+        .on {
+            display: inline-block;
+        }
+
+
+        #myProfile {
+            /* background-color: blueviolet; */
+            font-family: "OverLock", "Anton";
+            font-style: italic;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        #my {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mainBody">
+        <div id="content">
+            <div id="cont">
+
+                <div class="card show on" id="myPhoto_1">
+                    <img src="movie (1).jpg" class="myPicture" alt="내 사진1" onclick="change(1)">
+                </div>
+                <div class="card show" id="myPhoto_2">
+                    <img src="movie (2).jpg" class="myPicture" alt="내 사진1" onclick="change(2)">
+                </div>
+                <div class="card show" id="myPhoto_3">
+                    <img src="movie (3).jpg" class="myPicture" alt="내 사진1" onclick="change(3)">
+                </div>
+                <div class="card show" id="myPhoto_4">
+                    <img src="movie (4).jpg" class="myPicture" alt="내 사진1" onclick="change(4)">
+                </div>
+                <div class="card show" id="myPhoto_5">
+                    <img src="movie (5).jpg" class="myPicture" alt="내 사진1" onclick="change(5)">
+
+                </div>
+                <div class="card show" id="myPhoto_6">
+                    <img src="movie (6).jpg" class="myPicture" alt="내 사진1" onclick="change(6)">
+                </div>
+                <div class="card show" id="myPhoto_7">
+                    <img src="movie (7).jpg" class="myPicture" alt="내 사진1" onclick="change(7)">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+        <script>
+            function change(i) {
+                if (i < 7) {
+                    $("#myPhoto_"+i).toggleClass("on");
+                    $("#myPhoto_"+(i+1)).toggleClass("on");
+                }
+                if (i == 7) {
+                    $("#myPhoto_7").toggleClass("on");
+                    $("#myPhoto_1").toggleClass("on");
+                }
+
+            }
+
+
+
+        </script>
+
+</body>
+
+</html>
